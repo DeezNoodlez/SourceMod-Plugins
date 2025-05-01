@@ -12,7 +12,6 @@ public Plugin myinfo = {
     author      = "DeezNoodlez",
     description = "Reminds discord invite and rtv in chat periodically. Made from VIORA's Uncletopia Nags",
     version     = "0.1.0",
-    url         = "https://github.com/DeezNoodlez/SourceMod-Plugins/leanlegacy-nags"
 };
 
 ConVar g_cvarDiscordTimer;
