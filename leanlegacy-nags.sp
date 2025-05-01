@@ -2,7 +2,7 @@
 #pragma newdecls required
 
 #include <sourcemod>
-// #include <morecolors>
+#include <morecolors>
 
 #define DISCORD_TIMER g_cvarDiscordTimer.FloatValue
 #define RTV_TIMER g_cvarRtvTimer.FloatValue
@@ -18,7 +18,7 @@ public Plugin myinfo = {
 ConVar g_cvarDiscordTimer;
 ConVar g_cvarRtvTimer;
 Handle g_DiscordTimer;
-Hangle g_RtvTimer;
+Handle g_RtvTimer;
 
 public void OnPluginStart() {
     g_cvarDiscordTimer = CreateConVar(
