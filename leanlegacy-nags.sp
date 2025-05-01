@@ -35,19 +35,19 @@ public void OnPluginStart() {
 }
 
 public void OnMapStart() {
-    CleanupTimer(g_DiscordTimer)
-    CleanupTimer(g_RtvTimer)
+    CleanupTimer(g_DiscordTimer);
+    CleanupTimer(g_RtvTimer);
 
-    g_DiscordTimer = CreateTimer(DISCORD_TIMER, DiscordNag)
-    g_RtvTimer = CreateTimer(RTV_TIMER, RtvNag)
+    g_DiscordTimer = CreateTimer(DISCORD_TIMER, DiscordNag);
+    g_RtvTimer = CreateTimer(RTV_TIMER, RtvNag);
 }
 
 public Action DiscordNag(Handle timer) {
     MC_PrintToChatAll(
         "Join the community discord at https://discord.gg/d4hBPpd9mJ"
     )
-    CleanupTimer(g_DiscordTimer)
-    g_DiscordTimer = CreateTimer(DISCORD_TIMER, DiscordNag)
+    CleanupTimer(g_DiscordTimer);
+    g_DiscordTimer = CreateTimer(DISCORD_TIMER, DiscordNag);
     return Plugin_Stop;
 }
 
@@ -55,8 +55,8 @@ public Action RtvNag(Handle timer) {
     MC_PrintToChatAll(
         "If you dont want to play this map, type !rtv in chat to vote to change the map."
     )
-    CleanupTimer(g_RtvTimer)
-    g_RtvTimer = CreateTimer(RTV_TIMER, RtvNag)
+    CleanupTimer(g_RtvTimer);
+    g_RtvTimer = CreateTimer(RTV_TIMER, RtvNag);
     return Plugin_Stop;
 }
 
