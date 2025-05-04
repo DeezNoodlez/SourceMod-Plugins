@@ -11,7 +11,7 @@ public Plugin myinfo = {
     name        = "LeanLegacy Nags",
     author      = "DeezNoodlez",
     description = "Reminds discord invite and rtv in chat periodically. Made from VIORA's Uncletopia Nags",
-    version     = "0.1.0",
+    version     = "0.1.1",
 };
 
 ConVar g_cvarDiscordTimer;
@@ -43,7 +43,7 @@ public void OnMapStart() {
 
 public Action DiscordNag(Handle timer) {
     MC_PrintToChatAll(
-        "Join the community discord at https://discord.gg/d4hBPpd9mJ"
+        "Join the community discord at {green}https://discord.gg/d4hBPpd9mJ{default}"
     );
     CleanupTimer(g_DiscordTimer);
     g_DiscordTimer = CreateTimer(DISCORD_TIMER, DiscordNag);
@@ -52,7 +52,7 @@ public Action DiscordNag(Handle timer) {
 
 public Action RtvNag(Handle timer) {
     MC_PrintToChatAll(
-        "If you dont want to play this map, type !rtv in chat to vote to change the map."
+        "If you dont want to play this map, type {green}!rtv{default} in chat to vote to change the map."
     );
     CleanupTimer(g_RtvTimer);
     g_RtvTimer = CreateTimer(RTV_TIMER, RtvNag);
