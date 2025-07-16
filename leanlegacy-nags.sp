@@ -63,7 +63,7 @@ public Action DiscordNag(Handle timer) {
 
 public Action RtvNag(Handle timer) {
     MC_PrintToChatAll(
-        "If you dont want to play this map, type {green}!rtv{default} in chat to vote to change the map."
+        "If you don't want to play this map, type {green}!rtv{default} in chat to vote to change the map."
     );
     CleanupTimer(g_RtvTimer);
     g_RtvTimer = CreateTimer(RTV_TIMER, RtvNag);
